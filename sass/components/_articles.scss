@@ -69,4 +69,16 @@
 		}
 	}
 	
+	@media screen and ( max-width: 480px ) {
+		li {
+			float: none;
+			width: 100%;
+			margin: 0;
+			
+			&:last-child {
+				margin-bottom: 25px;
+			}
+		}
+	}
+	
 }

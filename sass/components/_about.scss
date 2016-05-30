@@ -43,4 +43,8 @@
 			font-weight: $light;
 		}
 	}
+	
+	@media screen and ( max-width: 480px ) {
+		padding: 50px 20px;
+	}
 }
