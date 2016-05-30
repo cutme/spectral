@@ -1,0 +1,21 @@
+.c-social {
+	position: absolute; left: 0; top: 5px;
+
+	li {
+		margin-bottom: 10px;
+	}
+	
+	a {
+		display: block;
+		width: 36px; height: 36px;
+		background-color: $gray;
+		text-align: center;
+		font-size: 30px;
+		line-height: 36px;
+		color: white;
+		
+		&:hover {
+			background-color: darken($gray, 10%);
+		}
+	}
+}

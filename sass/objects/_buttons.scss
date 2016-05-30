@@ -1,0 +1,55 @@
+.o-btn {
+	@include antialias;
+	@include border-radius;
+	z-index: 10;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	white-space: nowrap;
+	text-align: center;
+	font: {
+		family: $sans-serif;
+		weight: $black;
+	}
+
+	&--medium {
+		height: 44px;
+		padding: 0 50px;
+		font-size: em(13);
+		line-height: 42px;
+	}
+	
+	&--small {
+		height: 36px;
+		padding: 0 25px;
+		font-size: em(11);
+		line-height: 34px;
+	}
+	
+	&--outline {
+		border-width: 1px;
+		border-style: solid;
+
+		&:hover {
+			background-color: white;
+		}
+	}
+	
+	&--green {
+		background-color: $green;
+		color: white;
+
+		&:hover {
+			background-color: darken( $green, 10% );
+		}
+	}
+	
+	&--red {
+		background-color: $red;
+		color: white;
+
+		&:hover {
+			background-color: darken( $red, 10% );
+		}
+	}
+}

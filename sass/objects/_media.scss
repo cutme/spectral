@@ -1,0 +1,19 @@
+.o-media {
+	z-index: 5;
+	position: relative; 
+	display: block;
+	
+	&--max {
+		max-width: 100%;
+		height: auto;
+	}
+	
+	&--bg {
+		@include transform(translate(-50%,-50%));
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		height: 100%;
+		width: auto;
+	}
+}

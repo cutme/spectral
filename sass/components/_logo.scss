@@ -1,0 +1,38 @@
+.c-logo {
+
+	.c-topbar & {
+		left: 30px;
+		display: block;
+		width: 118px;		
+
+		@media screen and ( max-width: 640px ) {
+			width: 90px;
+		}
+	}
+	
+	.o-footer & {
+		position: absolute;
+		top: 0;
+		display: block;
+		width: 85px;		
+		
+		@media screen and ( max-width: 800px ) {
+			top: auto;
+			bottom: -20px;
+		}
+		
+		@media screen and ( max-width: 640px ) {
+			position: relative;
+			left: auto; bottom: auto;
+			margin-bottom: 25px;
+		}
+	}
+	
+	@media screen and ( max-width: $grid-base-width+px ) {
+		left: 20px;
+		
+		.c-topbar & {
+			left: 20px;
+		}
+	}
+}

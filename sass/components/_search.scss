@@ -1,0 +1,21 @@
+.c-search {
+	@include border-radius;
+	position: relative;
+	background-color: #eee;
+	padding: 25px;
+
+	.gradient {
+		@include background-size( cover );
+		position: absolute;
+		left: 0; top: 0;
+		width: 62px; height: 62px;
+		background-image: url(../img/gradient/quarter-1.png);
+	}
+	
+	.icon-search {
+		display: inline-block;
+		margin-bottom: 15px;
+		font-size: em(56);
+		color: $green;
+	}
+}

@@ -1,0 +1,19 @@
+.o-footer {
+	position: relative;
+	padding: 30px 0 50px 0;
+	
+	.o-wrap {
+		height: 100%;
+		
+		@media screen and ( max-width: 480px ) {
+			padding: {
+				left: 20px;
+				right: 20px;
+			}
+		}
+	}
+	
+	@media screen and ( max-width: 640px ) {
+		padding-bottom: 0;
+	}
+}

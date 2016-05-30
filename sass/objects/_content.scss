@@ -1,0 +1,25 @@
+.o-content {
+	float: left;
+	
+	&--normal {
+		width: grid(580); // 600
+	}
+	
+	&--huge {
+		float: right;
+		width: grid(855);
+	}
+	
+	&--medium {
+		width: grid(700);
+	}
+
+	&--wide {
+		width: grid(770);
+	}
+	
+	@media screen and ( max-width: 800px ) {
+		float: none;
+		width: 100%;
+	}
+}

@@ -1,0 +1,17 @@
+.o-wrap {
+	@include clear;
+	position: relative;
+	max-width: $grid-base-width+px;
+	margin: 0 auto;
+	
+	.c-top & {
+		height: 100%;
+	}
+	
+	@media screen and ( min-width: 481px ) and ( max-width: $grid-base-width+px ) {
+		padding: {
+			left: 20px;
+			right: 20px;
+		}
+	}
+}

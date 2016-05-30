@@ -1,0 +1,35 @@
+.c-copyrights {
+	position: absolute; right: 0; bottom: -50px;
+	min-height: 80px;
+	background: {
+		image: url(../img/gradient/half.png);
+		repeat: no-repeat;
+		position: right bottom;
+	}
+	padding-top: 20px;
+	text-align: right;
+	color: #a2a2a2;
+	
+	p {
+		margin-bottom: 5px;
+		font: {
+			family: $sans-serif;
+			size: em(12);
+		}
+	}
+	
+	@media screen and ( max-width: 640px ) {
+		position: relative;
+		right: auto;
+		bottom: auto;
+		background-position: left bottom;
+		
+		p {
+			text-align: left;
+			
+			&:last-of-type {
+				margin: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+.c-nav-secondary {
+	float: left;
+	width: grid(560);
+	padding-left: grid(160); 
+
+	ul {
+		float: left;
+		width: 50%;
+
+		li {
+			margin-bottom: 3px;
+
+			a {
+				text-transform: uppercase;
+				font: {
+					family: $sans-serif;
+					size: em(12);
+				}
+				color: #878787;
+				
+				&:hover {
+					color: $red;
+				}
+			}
+			
+			&.no-link {
+				a {
+					text-transform: none;
+					font: {
+						size: 14px;
+						weight: $black;
+					}
+					cursor: default;
+					color: #252525;
+				}
+			}
+		}
+	}
+	
+	@media screen and ( max-width: 800px ) {
+		padding-left: 0;
+		width: grid(328, 760);
+	}
+	
+	@media screen and ( max-width: 640px ) {
+		float: none;
+		width: 100%;
+	}
+}

@@ -1,0 +1,15 @@
+.c-topbar {
+	position: fixed;
+	left: 0; top: 0; z-index: 20;
+	width: 100%;
+	height: 90px;
+	background-color: white;
+	
+	.o-wrap {
+		height: 100%;
+	}
+	
+	@media screen and ( max-width: 640px ) {
+		height: 70px;
+	}
+}

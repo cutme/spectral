@@ -1,0 +1,45 @@
+.o-header-top {
+	z-index: 10;
+	
+	h1 {
+		margin-bottom: 20px;
+		font: {
+			size: em(42);
+			weight: $black;
+		}
+		
+		.c-top--plain {
+			font-size: em(48);
+		}
+	}
+
+	h5 {
+		margin-bottom: 15px;
+		text-transform: uppercase;
+	}
+	
+	p {
+		font: {
+			size: em(14);
+			weight: $light;
+		}
+	}
+	
+	.c-top--contact & {
+		width: 580px;
+		padding: 45px 0;
+		
+		.c-breadcrumbs {
+			margin-bottom: 15px;
+		}
+		
+		.c-article__excerpt {
+			padding-right: 40px;
+			
+			p {
+				line-height: 1.8;
+				font-weight: $regular;
+			}
+		}
+	}
+}

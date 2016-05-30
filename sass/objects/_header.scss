@@ -1,0 +1,46 @@
+.o-header {
+	margin-bottom: 25px;
+	
+	h2 {
+		font: {
+			size: em(22);
+			weight: $black;
+		}
+		
+		@media screen and ( max-width: 480px ) {
+			padding: 0 20px;
+			text-align: center;
+		}
+		
+		@media screen and ( max-width: 375px ) {
+			font-size: em(19);
+		}
+	}
+	
+	&--panel {
+		h2 {
+			margin-bottom: 10px;
+		}
+
+		h6 {	
+			font: {
+				family: $serif;
+				size: em(12);
+			}
+		}
+	}
+
+	&--contact {
+		h2 {
+			margin-bottom: 15px;
+			font-size: em(27);
+		}
+		
+		h4 {
+			font: {
+				family: $serif;
+				weight: $bold;
+			}
+		}
+	}
+}

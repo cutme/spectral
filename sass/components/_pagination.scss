@@ -1,0 +1,51 @@
+.c-pagination {
+	li {
+		display: inline-block;
+		padding: 0 10px;
+		
+		a {
+			font-size: em(12);
+			color: $gray;
+			
+			&:hover {
+				color: $c-black;
+			}
+		}
+		
+		&.is-active {
+			a {
+				color: $c-black;
+			}
+		}
+		
+		&:last-child {
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+
+	&__next,
+	&__prev {
+		display: inline-block;
+		border: 1px solid $gray;
+		padding: 2px 10px;
+		font-size: 16px;
+		
+		&:hover {
+			border-color: $c-black;
+			color: $c-black;
+		}
+	}
+	
+	&__next {		
+		&:before {
+			content: '→';
+		}
+	}
+	
+	&__prev {
+		&:before {
+			content: '←';
+		}
+	}
+}

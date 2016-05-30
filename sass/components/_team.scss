@@ -1,0 +1,35 @@
+.c-team {
+	li {
+		float: left;
+		width: 50%;
+		line-height: 1.8;
+	}
+	
+	a {
+		&:hover {
+			color: $red;
+		}
+	}
+
+	&__name {
+		text-transform: uppercase;
+		font: {
+			family: $sans-serif;
+			size: em(17);
+		}
+	}
+	
+	&__position {
+		text-transform: uppercase;
+		font: {
+			family: $sans-serif;
+			size: em(12);
+		}
+		color: $blue;
+	}
+	
+	&__email,
+	&__phone {
+		font-size: em(14);
+	}
+}

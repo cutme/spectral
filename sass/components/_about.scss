@@ -1,0 +1,46 @@
+.c-about {
+	@include background-size( cover );
+	min-height: 560px;
+	background-image: url(../img/about.jpg);
+	padding: 50px;
+	text-align: center;
+	color: white;
+	
+	i {
+		@include background-size( cover );
+		display: block;
+		width: 92px; height: 92px;
+		background-image: url(../img/gradient/circle.png);
+		margin: {
+			left: auto;
+			right: auto;
+		}
+	}
+	
+	&__lead {
+		margin-bottom: 25px;
+		font: {
+			weight: $black;
+			size: em(48);
+		}
+			
+		@media screen and ( max-width: 800px ) {
+			font-size: 7.5vw;
+		}
+	}
+	
+	&__title {
+		margin-bottom: 15px;
+		text-transform: uppercase;
+	}
+	
+	p {
+		margin-bottom: 1.5em;
+		line-height: 1.3;
+		font-size: em(14);
+		
+		&+p {
+			font-weight: $light;
+		}
+	}
+}

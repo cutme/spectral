@@ -1,0 +1,21 @@
+.c-breadcrumbs {
+	font: {
+		family: $sans-serif;
+		size: em(14);
+	}
+	
+	.breadcrumb_last {
+		font-weight: $bold;
+	}
+	
+	span {
+		display: inline-block;
+		
+	}
+	
+	a {		
+		&:hover {
+			color: $red;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+.c-ask {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#44d0bd+0,4390fc+100 */
+	background: rgb(68,208,189); /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  rgba(68,208,189,1) 0%, rgba(67,144,252,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  rgba(68,208,189,1) 0%,rgba(67,144,252,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  rgba(68,208,189,1) 0%,rgba(67,144,252,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#44d0bd', endColorstr='#4390fc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	
+	@include border-radius;
+	padding: 25px;
+	color: white;
+}

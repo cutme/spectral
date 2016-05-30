@@ -1,0 +1,14 @@
+.c-popup {
+	position: relative;
+	max-width: 650px;
+	background-color: white;
+	padding: 40px;
+    margin: 40px auto;
+    
+    &--experts {
+	    .o-media {
+		    float: left;
+			margin: 0 20px 15px 0;
+	    }
+    }
+}

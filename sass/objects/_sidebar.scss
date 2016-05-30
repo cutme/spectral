@@ -1,0 +1,21 @@
+.o-sidebar {
+	float: right;
+	width: grid(370);
+	
+	&--normal {
+		float: left;
+		width: 325px;
+	}
+	
+	&--wide {
+		float: left;
+		width: 520px;
+		padding-left: 80px;
+		border-left: 1px solid #dfdfdf;
+	}
+	
+	@media screen and ( max-width: 800px ) {
+		float: none;
+		width: 100%;
+	}
+}

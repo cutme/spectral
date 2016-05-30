@@ -1,0 +1,14 @@
+.u-text-red {
+	color: $red;
+}
+
+.u-text-white {
+	color: white;
+	border-color: white;
+	
+	&.o-btn {
+		&:hover {
+			color: $c-black;
+		}
+	}
+}

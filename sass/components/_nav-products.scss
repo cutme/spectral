@@ -1,0 +1,22 @@
+.c-nav-products {
+	position: relative;
+	background-color: #f4f4f4;
+	padding: 25px;
+	
+	ul {
+		li {
+			margin-bottom: 10px;
+			
+			a {
+				font: {
+					family: $sans-serif;
+					size: em(13);
+				}
+
+				&:hover {
+					color: $red;
+				}
+			}
+		}
+	}
+}

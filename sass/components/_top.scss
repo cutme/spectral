@@ -1,0 +1,64 @@
+.c-top {
+	position: relative;
+	margin-top: 90px;
+	overflow: hidden;
+
+	&--contact {
+		height: 376px;
+		background-color: #f7f7f7;
+		border-top: 1px solid #dedede;
+		border-bottom: 1px solid #dedede;
+	}
+
+	&--home {
+		height: 630px;
+	}
+	
+	&--plain {
+		background-color: #f7f7f7;
+		border-top: 1px solid #dedede;
+		border-bottom: 1px solid #dedede;
+		padding: 45px 0;
+		
+		.c-breadcrumbs {
+			margin-bottom: 15px;
+		}
+		
+		.o-media {
+			margin-bottom: 40px;
+		}
+	}
+	
+	&--subsite {
+		height: 340px;
+	}
+	
+	&__photo {
+		position: absolute;
+		left: 580px; top: 0; z-index: 10;
+		width: 856px;
+		height: 376px;
+		overflow: hidden;
+		background: red;
+		
+		img {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			height: 100%;
+			width: auto;
+			-webkit-transform: translate(-50%,-50%);
+			-ms-transform: translate(-50%,-50%);
+			transform: translate(-50%,-50%);
+		}
+		
+		@media screen and ( max-width: $grid-base-width+px ) {
+			width: grid(856);
+		}
+	}
+	
+	@media screen and ( max-width: 640px ) {
+		margin-top: 70px;
+	}
+}
+
