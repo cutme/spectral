@@ -1,8 +1,8 @@
-h3 {
-	&.o-lead {
-		font: {
-			size: em(19);
-			weight: $black;
-		}
+.o-lead {
+	display: block;
+	margin-bottom: 10px;
+	font: {
+		size: em(19);
+		weight: $black;
 	}
 }
