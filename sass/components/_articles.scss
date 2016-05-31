@@ -75,6 +75,11 @@
 			}
 		}
 		
+		.o-media {
+			width: 100%;
+			max-width: none;
+		}
+
 		&--horiz {
 			max-width: 600px;
 			margin: 0 auto;
@@ -92,12 +97,7 @@
 			
 			.c-articles__content {
 				width: grid(330, 660);
-			}
-
-			.o-media {
-				width: 100%;
-				max-width: none;
-			}
+			}			
 		}
 	}
 	
