@@ -2,20 +2,50 @@
 	float: right;
 	width: grid(370);
 	
-	&--normal {
+	&--products {
 		float: left;
-		width: 325px;
+		width: grid(325);
 	}
 	
-	&--wide {
+	&--contact {
 		float: left;
-		width: 520px;
-		padding-left: 80px;
+		width: grid(520);
+		padding-left: grid(80);
 		border-left: 1px solid #dfdfdf;
 	}
 	
 	@media screen and ( max-width: 800px ) {
 		float: none;
 		width: 100%;
+		
+		&--contact {
+			max-width: 520px;
+			margin: 0 auto 40px auto;
+			border: none;
+			padding: 0 0 40px 0;
+			border-bottom: 1px solid #dfdfdf;
+		}
+		
+		&--products {
+			float: left;
+			width: grid(345, 760);
+			margin-left: -20px;
+		}
+	}
+	
+	@media screen and ( max-width: 640px ) {
+		&--contact {
+			padding: {
+				left: 20px;
+				right: 20px;
+				bottom: 0;
+			}
+		}
+
+		&--products {
+			float: none;
+			width: 100%;
+			margin-left: 0;
+		}
 	}
 }

@@ -5,9 +5,10 @@
 	
 	ul {
 		li {
-			margin-bottom: 10px;
-			
 			a {
+				display: block;
+				padding: 7px 0;
+
 				font: {
 					family: $sans-serif;
 					size: em(13);
@@ -17,6 +18,26 @@
 					color: $red;
 				}
 			}
+			
+			&.is-active {
+				width: calc(100% + 50px);
+				background-color: #e0e0e0;
+				margin-left: -25px;
+				padding-left: 25px;
+				padding-bottom: 10px;
+				
+				> ul {
+					padding-left: 25px;
+				}
+				
+				> a {
+					font-weight: $black;
+				}
+			}
 		}
+	}
+	
+	.sub-menu {
+		display: none;
 	}
 }

@@ -1,17 +1,21 @@
 .o-content {
 	float: left;
 	
-	&--normal {
-		width: grid(580); // 600
+	&--contact {
+		width: grid(580); // 600, 580
 	}
 	
-	&--huge {
+	&--normal {
+		width: grid(750); // 600, 580
+	}
+	
+	&--products {
 		float: right;
 		width: grid(855);
 	}
 	
 	&--medium {
-		width: grid(700);
+		width: grid(700, $grid-base-width - 150);
 	}
 
 	&--wide {
@@ -21,5 +25,34 @@
 	@media screen and ( max-width: 800px ) {
 		float: none;
 		width: 100%;
+		
+		&--contact {
+			max-width: 520px;
+			margin: 0 auto;
+		}
+		
+		&--products {
+			float: right;
+//			width: grid(855);
+			width: grid(440, 760);
+			margin-right: -20px;
+		}
+	}
+	
+	@media screen and ( max-width: 640px ) {
+		&--products {
+			float: none;
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+	
+	@media screen and ( max-width: 480px ) {
+		&--contact {
+			padding: {
+				left: 20px;
+				right: 20px;
+			}
+		}
 	}
 }

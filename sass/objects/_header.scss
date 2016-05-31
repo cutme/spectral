@@ -19,7 +19,7 @@
 	
 	&--panel {
 		h2 {
-			margin-bottom: 10px;
+			margin-bottom: 10px;			
 		}
 
 		h6 {	
@@ -27,6 +27,24 @@
 				family: $serif;
 				size: em(12);
 			}
+		}
+		
+		@media screen and ( max-width: 800px ) {
+			text-align: left !important;
+	
+			br {
+				display: none;
+			}
+		}
+		
+		@media screen and ( min-width: 641px ) and ( max-width: 800px ) {
+			h2 {
+				margin-bottom: 5px;
+			}
+		}
+		
+		@media screen and ( max-width: 640px ) {
+			text-align: center !important;
 		}
 	}
 

@@ -17,6 +17,12 @@
 
 .u-buffer-half {
 	margin-bottom: 25px;
+	
+	.c-search & {
+		@media screen and ( max-width: 640px ) {
+			margin-bottom: 10px;
+		}
+	}
 }
 
 .u-buffer {
@@ -33,6 +39,14 @@
 
 .u-buffer-left {
 	padding-left: 150px;
+	
+	@media screen and ( max-width: 800px ) {
+		padding-left: 75px;
+	}
+	
+	@media screen and ( max-width: 640px ) {
+		padding-left: 0;
+	}
 }
 
 .u-gradient {
@@ -46,6 +60,14 @@
 		&:before {
 			width: 126px; height: 126px;
 			background-image: url(../img/gradient/circle.png);
+			
+			@media screen and ( max-width: $grid-base-width+px ) {
+				left: 20px;
+			}
+			
+			@media screen and ( max-width: 800px ) {
+				left: -75px;
+			}
 		}
 	}
 	

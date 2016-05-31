@@ -18,4 +18,41 @@
 		font-size: em(56);
 		color: $green;
 	}
+	
+	@media screen and ( max-width: 800px ) {
+		.icon-search {
+			font-size: em(42);
+		}
+	}
+	
+	@media screen and ( min-width: 641px ) and ( max-width: 800px ) {
+		width: calc(100% + 40px);
+		margin: {
+			left: -20px;
+			bottom: 70px;
+		}
+		padding: 20px;
+		
+		.gradient {
+			@include transform(scaleX(-1));
+			left: auto; right: 0;
+		}
+		
+		.icon-search {
+			float: left;
+			margin-right: 20px;
+		}
+	}
+	
+	@media screen and ( max-width: 640px ) {
+		margin-bottom: 25px;
+		padding: {
+			left: 10px;
+			right: 10px;
+		}
+
+		.icon-search {
+			margin-bottom: 20px;
+		}
+	}
 }

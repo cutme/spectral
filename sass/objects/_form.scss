@@ -43,6 +43,34 @@
 			font-family: $sans-serif;
 			font-size: em(14);
 		}
+		
+		@media screen and ( max-width: 800px ) {			
+			.o-btn {
+				width: 100%;
+			}
+		}
+	}
+
+
+	.c-search & {
+
+		@media screen and ( min-width: 641px ) and ( max-width: 800px ) {
+			.o-form {
+				display: table;
+				width: 100%;
+			}
+
+			.o-form__row {
+				display: table-cell;
+				width: 25%;
+				padding-right: 10px;
+				vertical-align: top;
+				
+				&:last-of-type {
+					padding-right: 0;
+				}
+			}
+		}	
 	}
 	
 	&--bordered {

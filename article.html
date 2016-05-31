@@ -13,8 +13,8 @@
 
 	<div class="c-topbar">
 		<div class="o-wrap">
-			<a href="#" class="c-logo">
-				<img src="img/logo-spectral.png" alt="spectral" class="u-posy" />
+			<a href="#" class="c-logo u-posy">
+				<img src="img/logo-spectral.png" alt="spectral" class="o-media o-media--max" />
 			</a>
 			
 			<nav class="c-nav-primary u-posy">
@@ -40,6 +40,24 @@
 					</li>					
 				</ul>
 			</nav>
+			
+			<span class="c-nav-trigger u-posy">
+				<svg class="inline-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  width="36px" height="36px" viewBox="0 0 32 22.5" enable-background="new 0 0 32 22.5" xml:space="preserve">
+					<title>Mobile Menu</title>
+					<g class="svg-menu-toggle">
+						<path class="bar" d="M20.945,8.75c0,0.69-0.5,1.25-1.117,1.25H3.141c-0.617,0-1.118-0.56-1.118-1.25l0,0 c0-0.69,0.5-1.25,1.118-1.25h16.688C20.445,7.5,20.945,8.06,20.945,8.75L20.945,8.75z">
+						</path>
+				
+						<path class="bar" d="M20.923,15c0,0.689-0.501,1.25-1.118,1.25H3.118C2.5,16.25,2,15.689,2,15l0,0c0-0.689,0.5-1.25,1.118-1.25 h16.687C20.422,13.75,20.923,14.311,20.923,15L20.923,15z">
+						</path>
+						
+						<path class="bar" d="M20.969,21.25c0,0.689-0.5,1.25-1.117,1.25H3.164c-0.617,0-1.118-0.561-1.118-1.25l0,0 c0-0.689,0.5-1.25,1.118-1.25h16.688C20.469,20,20.969,20.561,20.969,21.25L20.969,21.25z">
+						</path>
+				
+						<rect width="36" height="36" fill="none"></rect>
+					</g>
+				</svg>
+			</span>
 		</div>
 	</div>
 
@@ -73,8 +91,10 @@
 					</span>
 				</span>
 			</div>
-			
-			<img src="asseets/top/article.jpg" alt="article" width="1015" height="370" class="o-media o-media--max" />
+
+			<div class="c-top__photo--product">
+				<img src="asseets/top/article.jpg" alt="article" width="1015" height="370" class="o-media o-media--max" />
+			</div>
 			
 			<div class="c-article__excerpt u-buffer-left">
 				<p>
@@ -86,8 +106,25 @@
 	</div>
 
 
-	<div class="o-wrap u-buffer u-buffer-left">
-		<div class="o-content o-content--normal c-article">
+	<div class="o-wrap u-buffer">
+		<div class="c-social">
+			<ul>
+				<li>
+					<a href="#" class="icon-facebook"></a>
+				</li>
+				
+				<li>
+					<a href="#" class="icon-twitter"></a>
+				</li>
+				
+				<li>
+					<a href="#" class="icon-linkedin"></a>
+				</li>
+			</ul>
+		</div>
+		
+		
+		<div class="o-content o-content--normal c-article u-buffer-left">
 			
 			<p>
 			When you are looking for a new detector for energy dispersive X-ray microanalysis (EDS) there are several things to think about.
@@ -137,8 +174,8 @@ Converting photons into pulses
 In the detector chip the incoming photon will be converted to an electrical charge which are collected at the anode aided by an electrical field, drift field, in the detector. The anode is connected to a field effect transistor, FET, placed either directly on the chip or attached to it. The FET converts the charge into a voltage output with is sent to the multichannel analyzer through a preamplifier and an analogue to digital converter, ADC.
 			</p>			
 		</div>
-
-
+		
+		
 		<div class="o-sidebar">
 			<div class="c-search">
 				<i class="gradient"></i>
@@ -181,24 +218,7 @@ In the detector chip the incoming photon will be converted to an electrical char
 					</div>
 				</form>
 			</div>
-		</div>
-
-
-		<div class="c-social">
-			<ul>
-				<li>
-					<a href="#" class="icon-facebook"></a>
-				</li>
-				
-				<li>
-					<a href="#" class="icon-twitter"></a>
-				</li>
-				
-				<li>
-					<a href="#" class="icon-linkedin"></a>
-				</li>
-			</ul>
-		</div>
+		</div>		
 
 	</div>
 
@@ -208,7 +228,7 @@ In the detector chip the incoming photon will be converted to an electrical char
 			<h2>Our latest products</h2>
 		</div>
 		
-		<ul class="c-products clear">
+		<ul class="c-products c-products--latest clear">
 			<li class="c-products__box">
 				<a href="#" class="c-products__item">
 					<img src="asseets/product-1.jpg" alt="" width="280" height="200" class="o-media o-media--max" />
@@ -255,7 +275,7 @@ In the detector chip the incoming photon will be converted to an electrical char
 				<img src="img/logo-spectral.png" alt="logo-spectral" class="o-media o-media--max" />
 			</a>
 
-			<nav class="c-nav-secondary clear">
+			<nav class="c-nav-secondary u-buffer-half clear">
 				<ul>
 					<li class="no-link">
 						<a href="#">About Spectral</a>
@@ -300,7 +320,7 @@ In the detector chip the incoming photon will be converted to an electrical char
 					</li>
 				</ul>
 			</nav>
-			
+
 			<div class="c-newsletter u-buffer">
 				<h3 class="o-lead">We've got BIG news</h3>
 				<p class="c-newsletter__sublead">Stay informed about the latest Spectral news, amazing new products and so much more.</p>

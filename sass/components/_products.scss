@@ -13,10 +13,9 @@
 		height: 310px;
 		border-top: 1px solid $gray--brighter;
 		border-right: 1px solid $gray--brighter;
-		
-		
+
 		&--small {
-			width: 285px;
+			width: grid(285, 855);
 		}	
 		
 		&:first-child {
@@ -43,8 +42,15 @@
 		}
 		
 		&:nth-child(3n+1) {
-			border-left: 1px solid $gray--brighter;
-			
+			@media screen and ( min-width: 801px ) {
+				border-left: 1px solid $gray--brighter;
+			}
+		}
+		
+		&:nth-child(2n+1) {
+			@media screen and ( max-width: 800px ) {
+				border-left: 1px solid $gray--brighter;
+			}
 		}
 		
 		&:nth-last-child(1),
@@ -96,11 +102,21 @@
 				}
 			}
 		}
+		
+		&__box {
+			&--small {
+				width: 50%;
+			}
+		}
 	}
 
 	@media screen and ( max-width: 480px ) {
 		&__box {
 			border-left: 1px solid $gray--brighter;
+			
+			&--small {
+				width: 100%;
+			}
 		}
 
 		&--latest {

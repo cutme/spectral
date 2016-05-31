@@ -22,7 +22,6 @@
 	}
 	
 	&__excerpt {
-		padding-right: 150px;
 		font-size: em(19);
 				
 		p {
@@ -46,6 +45,40 @@
 			line-height: 17px;
 			margin: 0;
 			padding: 0 4px 5px;
+		}
+	}
+	
+	@media screen and ( min-width: 801px ) {
+		&__excerpt {
+			padding-right: 150px;
+		}
+	}
+	
+	@media screen and ( max-width: 800px ) {
+		&__excerpt {
+
+			.c-top--contact & {
+			    padding: 25px 20px 35px 20px !important;
+
+			    br {
+				    display: none;
+			    }
+			}
+		}
+	}
+	
+	@media screen and ( min-width: 641px ) and ( max-width: 800px ) {
+		padding-right: 50px;
+	}
+	
+	@media screen and ( max-width: 640px ) {
+		padding: {
+			left: 20px;
+			right: 20px;
+		}
+		
+		.o-content--contact & {
+			padding: 0;
 		}
 	}
 }

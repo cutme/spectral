@@ -18,4 +18,28 @@
 			background-color: darken($gray, 10%);
 		}
 	}
+	
+	@media screen and ( max-width: $grid-base-width+px ) {
+		left: 20px;
+	}
+	
+	@media screen and ( max-width: 800px ) {
+		position: relative;
+		left: auto; top: auto;
+		margin-bottom: 25px;
+		padding-left: 75px;
+
+		li {
+			display: inline-block;
+			margin-right: 2px;
+		}
+
+		&--nomobile {
+			display: none;
+		}
+	}
+	
+	@media screen and ( max-width: 640px ) {
+		padding-left: 20px;
+	}
 }

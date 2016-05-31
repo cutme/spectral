@@ -4,10 +4,14 @@
 	overflow: hidden;
 
 	&--contact {
-		height: 376px;
+		min-height: 376px;
 		background-color: #f7f7f7;
 		border-top: 1px solid #dedede;
 		border-bottom: 1px solid #dedede;
+		
+		.o-wrap {
+			min-height: 376px;
+		}
 	}
 
 	&--home {
@@ -34,31 +38,65 @@
 	}
 	
 	&__photo {
-		position: absolute;
-		left: 580px; top: 0; z-index: 10;
-		width: 856px;
-		height: 376px;
-		overflow: hidden;
-		background: red;
-		
-		img {
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			height: 100%;
-			width: auto;
-			-webkit-transform: translate(-50%,-50%);
-			-ms-transform: translate(-50%,-50%);
-			transform: translate(-50%,-50%);
+		&--contact {
+			@media screen and ( min-width: 801px ) {
+				position: absolute;
+				left: grid(580); top: 0; z-index: 10;
+				width: grid(856);
+				height: 100%;
+				overflow: hidden;
+				background: red;
+				
+				img {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					height: 100%;
+					width: auto;
+					-webkit-transform: translate(-50%,-50%);
+					-ms-transform: translate(-50%,-50%);
+					transform: translate(-50%,-50%);
+				}		
+			}
+		}
+	}
+
+	@media screen and ( max-width: 800px ) {
+		&__photo {
+			&--contact {
+				width: calc(100% + 40px);
+				margin-left: -20px;
+				
+				.o-media {
+					max-width: 100%;
+					height: auto;
+				}
+			}
+			
+			&--product {
+				margin-left: -20px;
+				width: calc(100% + 40px);
+			}
 		}
 		
-		@media screen and ( max-width: $grid-base-width+px ) {
-			width: grid(856);
+		&--subsite {
+			height: 240px;
 		}
 	}
 	
 	@media screen and ( max-width: 640px ) {
-		margin-top: 0;
+		margin-top: 70px;
+
+		&--subsite {
+			height: auto;
+			min-height: 240px;
+			padding: 40px 20px 60px 20px;
+			text-align: center;
+		}
+		
+		&--home {
+			margin-top: 0;
+		}
 	}
 }
 

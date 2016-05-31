@@ -15,9 +15,6 @@ function debouncer(func, timeout) {
 
 jQuery(function($) {
 	function exist(o) {
-		
-		/* exist('.js-bigcaro') && S.bigcaro(); */
-
 		d = ($(o).length>0) ? true : false;
 		return d;
 	}
@@ -60,123 +57,99 @@ jQuery(function($) {
 		ns: function() {
 			$('select').niceSelect();
 		},
-		tabs: function() {
-			var el = $('.js-tabs');
-
-			function showTab(i, w) {
-				$('.o-tabs__nav .is-active', w).removeClass('is-active');
-				$('.o-tabs__nav li', w).eq(i).addClass('is-active');
-				$('.o-tabs__content .o-tabs__item', w).removeClass('is-active animated fadeIn');
-				$('.o-tabs__content .o-tabs__item', w).eq(i).addClass('is-active animated fadeIn');
-			}
-			el.each(function() {
-				var n = $('> .o-tabs__nav', this),
-					t = $('> ul > li', n),
-					i = n.find('.is-active').index(),
-					_t = $(this);
-
-				t.click(function(e) {
-					e.preventDefault();
-					i = $(this).index();
-					showTab(i, _t);
-				});
-
-				i && showTab(i, _t);
-			});
-		},
-		txt2psw: function() {
-			var el = $('.is-password');
-			el.each(function() {
-				$(this).on('click', function() {
-					$(this).attr('type', 'password');
-				});
-			});
-		},
-		validate: function() {
-			var el = $('form'),
-				error = 0,
-				errorClass = 'has-error',
-				check,
-				reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-
-			function checkField(o) {				
-				if ($(o).val() == '') {
-					$(o).parent().addClass(errorClass);
-					return false;
+		relocations: function() {
+			function ask() {
+				var el = $('.c-ask'),
+					status = false;
+	
+				function init() {
+					el.detach();
+					$('.o-content--products').after(el);
+					status = true;
 				}
-				return true;
-			}
-			var validateStart = function(o) {
-				error = 0;
-				el.find('.has-error').removeClass(errorClass);
-				$('[type=text], [type=tel], [type=password], [type=date], textarea', o).each(function() {
-					if ( $(this).prop('required') === true ) {
-						check = checkField(this);
-						if (check === false) {
-							error = 1;
+				$(window).resize(debouncer(function(e) {
+					if (window_smaller_than(641)) {
+						if (status === false) {
+							init();
 						}
-					}
-				});
-				$('[type=email], [type=text], [type=password]', o).on('keydown', function() {
-					$(this).parent().removeClass(errorClass);
-				});
-				$('[type=email]', o).each(function() {
-					if ($(this).prop('required')) {
-						var email = $(this).val();
-						if (email === '') {
-							$(this).parent().addClass(errorClass);
-							error = 1;
-						} else if (reg.test(email) === false) {
-							$(this).parent().addClass(errorClass);
-							error = 1;
-						} else {
-							$(this).parent().removeClass(errorClass);
-						}
-					}
-				});
-				$('[type=checkbox]', o).each(function() {
-					if ($(this).prop('required')) {
-						if (!$(this).prop('checked')) {
-							$(this).parent().addClass(errorClass);
-							error = 1;
-						} else {
-							$(this).parent().removeClass(errorClass);
-						}
-					}
-				});
-				return error;
-			};
-			el.each(function() {
-				var submit = $('.submit', this),
-					is_error, _t = $(this);
-				$('input, textarea, select', this).each(function() {
-					if ($(this).prop('required')) {
-						$(this).prev('.o-form__lead').append(' <i class="o-form__required">*</i>');
-					}
-				});
-				submit.on('click', function(e) {
-					e.preventDefault();
-					is_error = validateStart(_t);
-
-					if (is_error === 1) {
-						$('html, body').animate({
-							scrollTop: 0
-						}, 1500);
-						
 					} else {
-						_t.submit();
-						return true;
+						if (status === true) {
+							el.detach();
+							$('.c-nav-products').after(el);
+							status = false;
+						}
 					}
-				});
-			});
+				}));
+				if (window_smaller_than(641)) {
+					init();
+				}
+			}
+			
+			function team() {				
+				var el = $('.c-team'),
+					status = false;
+	
+				function init() {
+					el.detach();
+					$('.o-sidebar').after(el);
+					status = true;
+				}
+				$(window).resize(debouncer(function(e) {
+					if (window_smaller_than(481)) {
+						if (status === false) {
+							init();
+						}
+					} else {
+						if (status === true) {
+							el.detach();
+							$('.c-article').after(el);
+							status = false;
+						}
+					}
+				}));
+				if (window_smaller_than(481)) {
+					init();
+				}
+			}
+			
+			function topContact() {				
+				var el = $('.c-article__excerpt'),
+					status = false;
+	
+				function init() {
+					el.detach();
+					$('.c-top__photo--contact').after(el);
+					status = true;
+				}
+				$(window).resize(debouncer(function(e) {
+					if (window_smaller_than(801)) {
+						if (status === false) {
+							init();
+						}
+					} else {
+						if (status === true) {
+							el.detach();
+							$('.o-header-top h1').after(el);
+							status = false;
+						}
+					}
+				}));
+				if (window_smaller_than(801)) {
+					init();
+				}
+			}
+
+			exist('.c-team') && team();
+			exist('.c-top--contact') && topContact();
+			exist('.o-sidebar--products') && ask();
 		},
 		init: function() {
 			exist('select') && L.ns();
 			L.modernizrSupport();
-			L.validate();			
+			L.relocations();
 		}
 	};
-	
+
 	var N = {
 		mobileNav: function() {
 			function shTrigger() {
@@ -212,7 +185,20 @@ jQuery(function($) {
 			}
 			shTrigger();
 		},
+		productsNav: function() {
+			var el = $('.c-nav-products');
+			
+			$('a', el).on('click', function(e) {	
+				if ( $(this).next('.sub-menu').length > 0 ) {
+					e.preventDefault();
+					$(this).next('.sub-menu').slideToggle();
+					$(this).parent().toggleClass('is-active');
+				};
+			});
+			
+		},
 		init: function() {
+			exist('.c-nav-products') && N.productsNav();
 			N.mobileNav();
 		}
 	}

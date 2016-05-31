@@ -18,4 +18,13 @@
 			color: $red;
 		}
 	}
+	
+	@media screen and ( max-width: 640px ) {
+		text-align: center;
+		
+		.c-top--plain &,
+		.c-top--contact & {
+			text-align: left;
+		}
+	}
 }

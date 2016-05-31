@@ -14,4 +14,15 @@
 			right: 20px;
 		}
 	}
+	
+	.c-top--plain & {
+		@media screen and ( max-width: $grid-base-width+px ) {
+			padding: {
+				left: 20px;
+				right: 20px;
+			}
+		}
+		
+			
+	}
 }

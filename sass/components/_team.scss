@@ -3,6 +3,12 @@
 		float: left;
 		width: 50%;
 		line-height: 1.8;
+		
+		@media screen and ( max-width: 480px ) {
+			float: none;
+			width: 100%;
+		}
+		
 	}
 	
 	a {
@@ -31,5 +37,12 @@
 	&__email,
 	&__phone {
 		font-size: em(14);
+	}
+	
+	@media screen and ( max-width: 480px ) {
+		padding: {
+			left: 20px;
+			right: 20px;
+		}
 	}
 }

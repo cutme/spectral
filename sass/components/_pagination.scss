@@ -1,4 +1,6 @@
 .c-pagination {
+	text-align: right;
+
 	li {
 		display: inline-block;
 		padding: 0 10px;
@@ -47,5 +49,9 @@
 		&:before {
 			content: '←';
 		}
+	}
+	
+	@media screen and ( max-width: 640px ) {
+		text-align: center;
 	}
 }
