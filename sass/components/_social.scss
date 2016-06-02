@@ -28,6 +28,10 @@
 		left: auto; top: auto;
 		margin-bottom: 25px;
 		padding-left: 75px;
+		
+		.u-buffer-left & {
+			padding-left: 0;
+		}
 
 		li {
 			display: inline-block;

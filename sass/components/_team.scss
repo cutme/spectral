@@ -1,4 +1,5 @@
 .c-team {
+
 	li {
 		float: left;
 		width: 50%;
@@ -37,6 +38,14 @@
 	&__email,
 	&__phone {
 		font-size: em(14);
+	}
+	
+	@media screen and ( max-width: 800px ) {
+		max-width: 520px;
+		margin: {
+			left: auto;
+			right: auto;
+		}
 	}
 	
 	@media screen and ( max-width: 480px ) {
