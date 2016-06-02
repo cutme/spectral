@@ -85,7 +85,7 @@ jQuery(function($) {
 				}
 			}
 			
-			function team() {				
+			function team() {		
 				var el = $('.c-team'),
 					status = false;
 	
@@ -95,7 +95,7 @@ jQuery(function($) {
 					status = true;
 				}
 				$(window).resize(debouncer(function(e) {
-					if (window_smaller_than(481)) {
+					if (window_smaller_than(801)) {
 						if (status === false) {
 							init();
 						}
@@ -107,7 +107,7 @@ jQuery(function($) {
 						}
 					}
 				}));
-				if (window_smaller_than(481)) {
+				if (window_smaller_than(801)) {
 					init();
 				}
 			}
